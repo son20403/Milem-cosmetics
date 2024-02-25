@@ -1,0 +1,137 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    /* --primary-color: #ee4d2d; */
+    --primary-color: #b16e36;
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 55px;
+    --header-navbar-wap: 32px;
+    --header-menu-list: 50px;
+    /* --primary-color-rgba: rgba(238, 77, 45,1); */
+    --default-cl: #9e5bab;
+    --black-cl-1: #444444;
+    --black-cl-2: #222222;
+    --white-cl-1: #fff;
+    --white-cl-2: rgba(255, 255, 255, 0.7);
+    --white-cl-3: #f8f7fd;
+    --orange-cl: #d26e4b;
+    --hight-header-top: 80px;
+    --hight-header-nav: 50px;
+    --hight-header: calc(var(--hight-header-nav) + var(--hight-header-top));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* overflow: hidden; */
+}
+
+html {
+    font-size: 62.5%;
+    /* 10px */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow: visible;
+}
+
+.app {
+    overflow: hidden;
+}
+.magin_app{
+    margin: 0 10px;
+}
+
+/* responsive */
+
+
+/* text */
+
+
+/* animation */
+/* @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+@keyframes headerNotify {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: (1);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorBtn {
+    0% {
+        color: var(--primary-color);
+    }
+
+    50% {
+        color: #2cccff;
+    }
+
+    100% {
+        color: var(--primary-color);
+    }
+}
+
+
+
+
+/* btn */
+.btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s ease;
+    width: 124px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+}

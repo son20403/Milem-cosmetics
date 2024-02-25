@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milem | products</title>
+    <link rel="icon" href="./assets/img/icon_milem.png">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/products_detail.css">
+    <link rel="stylesheet" href="./assets/css/products.css">
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/font/fontawesome/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+<body>
+    <!-- modal layout -->
+    <div class="modal">
+        <div class="modal_close">
+            <button onclick="click" class="close_btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="modal__overlay">
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <div class="box signin">
+                        <img src="./assets/img/logo_milem_text.png" alt="" class="box_img">
+                        <h2 class="signin_heading">
+                            Bạn đã có tài khoản ?
+                        </h2>
+                        <button class="signin_btn">
+                            Đăng nhập
+                        </button>
+                    </div>
+                    <div class="box signup">
+                        <img src="./assets/img/logo_milem_text.png" alt="" class="box_img">
+                        <h2 class="signup_heading">
+                            Bạn chưa có tài khoản ?
+                        </h2>
+                        <button class="signup_btn">
+                            Đăng ký
+                        </button>
+                    </div>
+                    <div class="modal_background"></div>
+
+                </div>
+                <div class="fromBx">
+
+                    <div class="form signinForm">
+                        <form action="#">
+                            <h3>Đăng nhập</h3>
+                            <input type="text" placeholder="Tài khoản" name="username" required>
+                            <input type="password" placeholder="Mật khẩu" name="password" required>
+                            <button class="signinForm_btn" type="submit">Đăng nhập</button>
+                            <a href="#" class="forgot">Quên mật khẩu ?</a>
+                        </form>
+                    </div>
+
+                    <div class="form signupForm">
+                        <form action="#">
+                            <h3>Đăng ký</h3>
+                            <input type="text" placeholder="Tài khoản " name="username" required>
+                            <input type="password" placeholder="Mật khẩu" name="password" required>
+                            <input type="text" placeholder="Họ và tên" name="fullname" required>
+                            <input type="text" placeholder="Email" name="email" required>
+                            <input type="text" placeholder="Điện thoại" name="phone" required>
+                            <input type="text" placeholder="Địa chỉ" name="address" required>
+                            <button class="signupForm_btn" type="submit">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--end modal layout -->
+
+    <!-- header__navbar-wap -->
+    <div class="sticky">
+        <div class="grid header__navbar-wap">
+            <div class="grid wide">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--separate"><i
+                                class="fa-brands fa-facebook"></i>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--separate"><i
+                                class="fa-brands fa-instagram"></i></li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer"><i class="fa-solid fa-envelope"></i></span>
+                        </li>
+                    </ul>
+
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a class="header__navbar-item-link" href="">
+                                Thông báo <i class="fa-solid fa-circle-exclamation"></i>
+                            </a>
+                            <!-- <div class="header__notify">
+                                        <header class="header__notify-header">
+                                            <h3>Thông báo mới</h3>
+                                        </header>
+                                        <ul class="header__notify-list">
+                                            <li class="header__notify-item header__notify-item--viewed">
+                                                <a href="" class="header__notify-link">
+                                                    <img src="./assets/img/mp1.jfif" alt="" class="header__notify-img">
+                                                    <div class="header__notify-info">
+                                                        <span class="header__notify-name">My pham chinh hang</span>
+                                                        <span class="header__notify-describe">Mo ta my pham chinh hang</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="header__notify-item">
+                                                <a href="" class="header__notify-link">
+                                                    <img src="./assets/img/mp1.jfif" alt="" class="header__notify-img">
+                                                    <div class="header__notify-info">
+                                                        <span class="header__notify-name">My pham chinh hang</span>
+                                                        <span class="header__notify-describe">Mo ta my pham chinh hang</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="header__notify-item">
+                                                <a href="" class="header__notify-link">
+                                                    <img src="./assets/img/mp1.jfif" alt="" class="header__notify-img">
+                                                    <div class="header__notify-info">
+                                                        <span class="header__notify-name">My pham chinh hangMy pham chinh hangMy
+                                                            pham chinh hangMy pham chinh hang</span>
+                                                        <span class="header__notify-describe"> Mo ta my pham chinh hangMo ta my
+                                                            pham chinh hangMo ta my pham chinh hangMo ta my pham chinh
+                                                            hang</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="header__notify-item">
+                                                <a href="" class="header__notify-link">
+                                                    <img src="./assets/img/mp1.jfif" alt="" class="header__notify-img">
+                                                    <div class="header__notify-info">
+                                                        <span class="header__notify-name">My pham chinh hang</span>
+                                                        <span class="header__notify-describe">Mo ta my pham chinh hang</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="header__notify-footer">
+                                            <a href="#" class="header__notify-footer-btn">
+                                                Xem tất cả
+                                            </a>
+                                        </div>
+                
+                                    </div> -->
+                        </li>
+                        <li class="header__navbar-item">
+                            <a class="header__navbar-item-link" href="">
+                                Trợ giúp <i class="fa-solid fa-circle-question"></i>
+                            </a>
+                        </li>
+                        <!-- <li class="header__navbar-item header__navbar-item-strong header__navbar-item--separate">Dang ky
+                                </li>
+                                <li class="header__navbar-item header__navbar-item-strong">Dang nhap</li> -->
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- end header__navbar-wap -->
+
+    <!-- header -->
+    <div class="grid wide">
+        <div class="header">
+            <!-- LOGO -->
+            <a href="index.html" class="header_logo-link">
+                <img class="header_logo" src="./assets/img/logo_milem.png" alt="">
+            </a>
+            <a href="index.html" class="header_logo-link link_none">
+                <img class="header_logo logo_none" src="./assets/img/logo_milem_text.png" alt="">
+            </a>
+            <!-- tablet-mobile navbar -->
+            <input hidden type="checkbox" name="" id="nav__mobile-input">
+
+            <div class="nav-menu-search">
+                <label for="nav__mobile-input" class="nav__mobile-btn">
+                    <!-- <img src="./assets/img/menu_icon.png" alt="" class="nav__mobile-img"> -->
+                    <i class="nav__mobile-img fa-solid fa-bars"></i>
+                </label>
+
+                <label for="mobile__search" class="nav__mobile-search">
+                    <img src="./assets/img/search__icon.png" alt="" class="nav__mobile-search-img">
+                </label>
+            </div>
+
+
+            <label for="nav__mobile-input" class="nav__overlay"></label>
+
+            <label for="nav__mobile-input" class="nav__mobile">
+                <!-- <img src="./assets/img/close_icon.png" alt="" class="nav__mobile-close"> -->
+                <i class="nav__mobile-close fa-solid fa-xmark"></i>
+                <div class="nav_login">
+                    <button onclick="click" class="nav_login_btn">Đăng nhập</button>
+                    <!-- <a href="#" class="header_logout">Đăng ký</a> -->
+                </div>
+                <ul class="nav__mobile-list">
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Trang chủ</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Sản phẩm</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Tin tức</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Liên hệ</a>
+                    </li>
+                </ul>
+                <!-- <ul class="nav__mobile-list">
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Trang chủ</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Giới thiệu</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Sản phẩm</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Tin tức</a>
+                    </li>
+                    <li class="nav__mobile-item">
+                        <a href="#" class="nav__mobile-link">Liên hệ</a>
+                    </li>
+                </ul> -->
+
+            </label>
+            <!-- end navnbar -->
+
+            <div class="header_search">
+                <form action="#" class="header_form">
+                    <input placeholder="Tìm kiếm" type="text" class="header_form-input">
+                    <button class="header_form-btn btn btn--primary">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="header_right">
+                <div class="header_login-logout">
+                    <button onclick="click" class="header_login">Đăng nhập</button>
+                    <!-- <a href="#" class="header_logout">Đăng ký</a> -->
+                </div>
+                <div class="header_cart">
+                    <div class="header__card-wrap">
+                        <i class="fa fa-basket-shopping"></i>
+                        <span class="header_cart-quantity">
+                            3
+                        </span>
+                        <!-- not products -->
+                        <!-- <div class="header__card-list header__card-list-no-card">              
+                                            <img class="header__card-list-no-card-img"  src="./assets/img/cart-empty.png" alt="">
+                                            <span class="header__card-list-no-card-msg">Chưa có sản phẩm</span>
+                                        </div> -->
+                        <!-- have products -->
+                        <div class="header__card-list">
+                            <h4 class="header__card-heading">
+                                Sản phẩm đã thêm
+                            </h4>
+                            <ul class="header__card-list-item">
+                                <li class="header__card-item">
+                                    <img src="./assets/img/sp_demo.jpg" alt="" class="header__card-img">
+                                    <div class="header__card-item-info">
+                                        <div class="header__card-item-head">
+                                            <h5 class="header__card-item-name">Sửa rửa mặt CETAPHIL Moisturizing
+                                                Lotion 20 fl oz</h5>
+                                            <div class="header__card-item-price-wrap">
+                                                <span class="header__card-item-price">200.000đ</span>
+                                                <span class="header__card-item-x">x</span>
+                                                <span class="header__card-item-quantity">1</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header__card-btn">
+                                <a href="#" class="btn btn--primary">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end header -->
+
+    <!-- menu -->
+    <div class="sticky_top">
+        <div class="grid wide">
+            <div class="header_menu">
+                <div class="row">
+                    <a href="index.html" class="header_logo-link" id="logo_none">
+                        <img class="header_logo-none" src="./assets/img/logo_milem_text.png" alt="">
+                    </a>
+                    <div class="col l-8 l-o-2">
+                        <ul class="header_menu-list">
+                            <li class="header_menu-item">
+                                <a href="" class="header_menu-link">Trang chủ</a>
+                            </li>
+                            <li class="header_menu-item">
+                                <a href="" class="header_menu-link">Giới thiệu</a>
+                            </li>
+                            <li class="header_menu-item">
+                                <a href="" class="header_menu-link">Sản phẩm</a>
+                            </li>
+                            <li class="header_menu-item">
+                                <a href="" class="header_menu-link">Tin tức</a>
+                            </li>
+                            <li class="header_menu-item">
+                                <a href="" class="header_menu-link">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end menu -->
+
+    <!-- products_detail -->
+
+    <!-- header_title -->
+    <div class="sticky_product_title">
+        <div class="grid header_product-title">
+            <div class="grid wide">
+                <div class="header_product">
+                    <p class="title1">Trang chủ</p>
+                    <span>/</span>
+                    <p class="title1">Sản phẩm</p>
+                    <span>/</span>
+                    <p class="title1">FANCL Mild Cleansing Oil - Dầu tẩy trang</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end header_title -->
+
+    <!-- product_detail-cart-fixed -->
+
+    <!-- end product_detail-cart-fixed -->
+
+    <!-- products_detail-fixed  -->
+
+    <!-- end products_detail-fixed  -->
+
+    <!-- cart  -->
+    <div class="app">
+        <div class="magin_app">
+            <section>
+                <div class="grid wide">
+                   <div class="checkout">
+                        <h1 class="checkout_heading">
+                            Địa chỉ giao hàng
+                        </h1>
+                        <div class="checkout_form">
+                            <h2 class="checkout_form-heading">
+                                Địa chỉ giao hàng
+                            </h2>
+                            <form class="checkout_form-info">
+                                <div class="row">
+                                    <div class="col l-6 c-12 m-12">
+                                        <div class="checkout_form-left">
+                                            <div class="checkout_form-left-info">
+                                                <label for=""></label>
+                                                <a class="checkout_link">Đăng nhập với tài khoản của tôi</a>
+                                            </div>
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Họ tên:</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Email:</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Điện thoại:</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col l-6 c-12 m-12">
+                                        <div class="checkout_form-right">
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Địa chỉ:</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Tỉnh/thành phố:</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Quận/huyện:</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="checkout_form-left-info">
+                                                <label for="">Xã/phường:</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn--primary checkout_btn">Tiến hành thanh toán</button>
+                            </form>
+                        </div>
+                   </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="grid footer">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-4 c-12 m-12">
+                            <img src="./assets/img/logo_milem_text.png" alt="" class="footer_logo">
+                            <p class="footer_text">
+                                04 Nguyễn Thúy - Hòa Minh - Liên Chiểu - Đà Nẵng
+                            </p>
+                            <p class="footer_text">
+                                Email: info@milem.vn
+                            </p>
+                            <p class="footer_text">
+                                Hotline: 0932 981 560
+                            </p>
+                            <p class="footer_text">
+                                Giờ làm việc
+                            </p>
+                            <p class="footer_text">
+                                Thứ 2 - Thứ 7: 10:00 - 21:30
+                            </p>
+                            <p class="footer_text">
+                                Chủ Nhật: 12:30 - 21:30
+                            </p>
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-item header__navbar-item--separate"><i
+                                        class="fa-brands fa-facebook"></i>
+                                </li>
+                                <li class="header__navbar-item header__navbar-item--separate"><i
+                                        class="fa-brands fa-instagram"></i></li>
+                                <li class="header__navbar-item">
+                                    <span class="header__navbar-title--no-pointer"><i
+                                            class="fa-solid fa-envelope"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col l-2 c-12 m-12">
+                            <h1 class="footer_heading">Menu</h1>
+                            <a href="#" class="footer_text">
+                                Trang chủ
+                            </a>
+                            <a href="#" class="footer_text">
+                                Giới thiệu
+                            </a>
+                            <a href="#" class="footer_text">
+                                Sản phẩm
+                            </a>
+                            <a href="#" class="footer_text">
+                                Tin tức
+                            </a>
+                            <a href="#" class="footer_text">
+                                Liên hệ
+                            </a>
+                        </div>
+                        <div class="col l-3 c-12 m-12">
+                            <h1 class="footer_heading">Thông tin và hướng dẫn</h1>
+                            <a href="#" class="footer_text">
+                                Hình thức thanh toán
+                            </a>
+                            <a href="#" class="footer_text">
+                                Chính sách bảo mật
+                            </a>
+                            <a href="#" class="footer_text">
+                                Điều khoản sử dụng
+                            </a>
+                        </div>
+                        <div class="col l-3 c-0 m-0">
+                            <div class="footer_fb">
+                                <div id="footer-fb-page" data-callback="loadFbPage" class="fb-page fb_iframe_widget"
+                                    data-href="https://www.facebook.com/milem.vn/" data-tabs="timeline" data-width="282"
+                                    data-height="250" data-small-header="true" data-adapt-container-width="true"
+                                    data-hide-cover="false" data-show-facepile="false" fb-xfbml-state="rendered"
+                                    fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=231871597516863&amp;container_width=255&amp;height=250&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmilem.vn%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=timeline&amp;width=300">
+                                    <span style="vertical-align: bottom; width: 282px; height: 250px;">
+                                        <iframe name="f368cbcf0fe4e2" width="px" height="250px"
+                                            data-testid="fb:page Facebook Social Plugin"
+                                            title="fb:page Facebook Social Plugin" frameborder="0"
+                                            allowtransparency="true" allowfullscreen="true" scrolling="no"
+                                            allow="encrypted-media"
+                                            src="https://www.facebook.com/v3.1/plugins/page.php?adapt_container_width=true&amp;app_id=231871597516863&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df1502a3e044eb78%26domain%3Dwww.milem.vn%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwww.milem.vn%252Ff1bf13f7dfd7d38%26relation%3Dparent.parent&amp;container_width=255&amp;height=250&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fmilem.vn%2F&amp;locale=vi_VN&amp;sdk=joey&amp;show_facepile=false&amp;small_header=true&amp;tabs=timeline&amp;width=300"
+                                            style="border: none; visibility: visible; width: 255px; height: 250px;"
+                                            class=""></iframe></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="text-center">Copyright 2018 © by MILEM | Your Skincare Friend. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./assets/js/slide.js"></script>
+    <script src="./assets/js/slick.js"></script>
+    <script src="./assets/js/scroll.js"></script>
+    <script src="./assets/js/modal.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider_products-thumb a').click(function (e) {
+                e.preventDefault();
+                $('.imgBox img').attr("src", $(this).attr("href"));
+            })
+        })
+        $(document).on('click', '.slider_products-list', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
+        $(document).on('click', '.products_detail-tab-item', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
